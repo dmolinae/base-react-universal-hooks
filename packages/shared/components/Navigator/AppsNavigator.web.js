@@ -10,18 +10,18 @@ import SideMenu from "../DefaultLayout/SideMenu/SideMenu";
 
 export default () => {
   return (
-    <View style={Styles.flex}>
-      <Header />
-      <View style={[Styles.flex, Styles.row]}>
-        <SideMenu />
-        <View style={Styles.flex}>
-          <Router>
+    <Router>
+      <View style={Styles.flex}>
+        <Header />
+        <View style={[Styles.flex, Styles.row]}>
+          <SideMenu />
+          <View style={Styles.flex}>
             <AppNavigatorSwitch/>
-          </Router>
+          </View>
         </View>
+        <Footer />
       </View>
-      <Footer />
-    </View>
+    </Router>
   );
 };
 
