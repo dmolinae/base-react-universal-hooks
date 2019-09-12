@@ -4,11 +4,11 @@ import { View, Text, StyleSheet } from "react-native";
 import Colors from '../constants/colors'
 import Texts from '../constants/texts'
 
-const HomeScreen = (props) => {
+const SecondScreen = (props) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text_title}>{Texts.welcome_title}</Text>
-      <Text style={styles.text_subtitle}>{Texts.welcome_subtitle}</Text>
+      <Text style={styles.text_title}>{Texts.second_title}</Text>
+      <Text style={styles.text_subtitle}>{Texts.second_subtitle}</Text>
     </View>
   )
 }
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default HomeScreen;
+export default SecondScreen;

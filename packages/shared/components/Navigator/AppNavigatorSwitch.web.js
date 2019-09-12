@@ -46,7 +46,6 @@ class AppNavigatorSwitch extends Component {
   render() {
     const { history } = this.props;
     return (
-      <div>
       <Switch>
         {this.generateRoutes(history)}
         <Route
@@ -57,7 +56,6 @@ class AppNavigatorSwitch extends Component {
           )}
         />
       </Switch>
-      </div>
     );
   }
 }

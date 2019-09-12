@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "Ryan Nixon Salim",
   "scripts": {
-    "watch:web": "webpack-dev-server --config webpack.dev.js --hot --mode development",
+    "watch:web": "webpack-dev-server --config webpack.dev.js --hot --mode development --host 0.0.0.0",
     "build:dev": "webpack --config webpack.dev.js --mode development",
     "build:web": "webpack --config webpack.prod.js --mode production"
   },

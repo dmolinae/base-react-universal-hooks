@@ -2,25 +2,34 @@ import React from "react";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import AppNavigatorSwitch from "./AppNavigatorSwitch";
-import { View, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-import DefaultHeader from "../DefaultLayout/DefaultHeader";
-import DefaultFooter from "../DefaultLayout/DefaultFooter";
-import DefaultSideMenu from "../DefaultLayout/DefaultSideMenu";
+import Header from "../DefaultLayout/Header/Header";
+import Footer from "../DefaultLayout/DefaultFooter";
+import SideMenu from "../DefaultLayout/SideMenu/SideMenu";
 
 export default () => {
   return (
-    <View style={{ flex: 1}}>
-      <DefaultHeader />
-      <View style={{flex: 1, flexDirection: 'row'}}>
-        <DefaultSideMenu />
-        <View style={{ flex: 1 }}>
+    <View style={Styles.flex}>
+      <Header />
+      <View style={[Styles.flex, Styles.row]}>
+        <SideMenu />
+        <View style={Styles.flex}>
           <Router>
-            <AppNavigatorSwitch />
+            <AppNavigatorSwitch/>
           </Router>
         </View>
       </View>
-      <DefaultFooter />
+      <Footer />
     </View>
   );
 };
+
+const Styles = StyleSheet.create({
+  flex: {
+    flex: 1
+  },
+  row: {
+    flexDirection: 'row'
+  }
+});
